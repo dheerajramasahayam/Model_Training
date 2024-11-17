@@ -5,15 +5,7 @@ from tqdm import tqdm
 
 def generate_handshake(ssid, bssid, encryption_type="WPA2-PSK"):
     """
-    Generates a synthetic Wi-Fi handshake with more realistic features.
-
-    Args:
-        ssid: The SSID of the network.
-        bssid: The BSSID of the access point.
-        encryption_type: The encryption type ("WPA2-PSK" or "WPA3").
-
-    Returns:
-        A list of Scapy packets representing the handshake.
+    Generates a synthetic Wi-Fi handshake.
     """
 
     # --- More Realistic Beacon ---

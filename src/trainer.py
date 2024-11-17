@@ -58,14 +58,13 @@ def train_models(processed_handshakes, passwords, char_space):
                         predicted_char = char_space[dqn_actions[i]]
                         predicted_passwords.append(predicted_char)
 
-                        # Calculate reward (replace with your actual reward function)
+                        # Calculate reward
                         reward = calculate_reward(predicted_char, batch_passwords[i])
                         rewards.append(reward)
 
                     # --- DQN Experience Replay ---
                     for i in range(batch_size):
                         # Store experience in the DQN agent's memory
-                        # (Assuming next_state is the same as current state for simplicity)
                         dqn_agent.remember(predictions[i], dqn_actions[i], rewards[i], predictions[i], False)
 
                     # Update the DQN agent (replay experiences)
