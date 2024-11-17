@@ -51,7 +51,7 @@ def generate_handshake(ssid, bssid, encryption_type="WPA2-PSK"):
     # Add some fuzzing to the packets (random variations)
     asso_req = fuzz(Dot11AssoReq(cap='ESS+privacy', addr2=bssid, addr1=client_mac, addr3=bssid))
     asso_resp = fuzz(Dot11AssoResp(cap='ESS+privacy', addr1=client_mac, addr2=bssid, addr3=bssid))
-    auth_req = fuzz(Dot11Auth(algo=0, seqnum=1, status=0, addr1=bssid, addr2=client_mac, addr3=bssid))
+    auth_req = fuzz(Dot11Auth(algo=0, seqnum=1, status=0, addr2=bssid, addr1=client_mac, addr3=bssid))
     auth_resp = fuzz(Dot11Auth(algo=0, seqnum=2, status=0, addr1=client_mac, addr2=bssid, addr3=bssid))
 
     # --- Add Data Packets with Random Content ---
