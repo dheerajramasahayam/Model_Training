@@ -1,5 +1,6 @@
 from scapy.all import (Dot11, Dot11Beacon, Dot11Elt, RadioTap, RandMAC, 
-                       IP, TCP, UDP, RandIP, fuzz, wrpcap)
+                       IP, TCP, UDP, RandIP, fuzz, wrpcap, 
+                       Dot11AssoReq, Dot11AssoResp, Dot11Auth)
 import random
 from tqdm import tqdm
 
